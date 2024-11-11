@@ -60,27 +60,26 @@ fetch(url)
 
 
 //metodo para crear
-formarticulo.addEventListener('submit',(e)=>{
-
-    e.preventDefault()
-    if(opcion=="crear"){
-        fetch(url,{
-            method:'POST',
-            headers:{'Content-Type': applications/json},
-        body: JSON.stringify({
-            descripcion:descripcion.value,
-            precio:precio.value,
-            stock:stock.value
-
+formarticulo.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (opcion === "crear") {
+        fetch(url, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'}, 
+            body: JSON.stringify({
+                descripcion: descripcion.value,
+                precio: precio.value,
+                stock: stock.value
+            })
         })
-    })
-    .then(response=>response.json())
-    .then(data=>{
-        const nuevoArticulo=[]
-        nuevoArticulo.push(data)
-        mostrar(nuevoArticulo)
-    })
-}
+        .then(response => response.json())
+        .then(data => {
+            const nuevoArticulo = [];
+            nuevoArticulo.push(data);
+            mostrar(nuevoArticulo);
+        })
+        .catch(error => console.error('Error:', error));  // Agregar manejo de error
+    }
 
-modalarticulo.hidde
-    })
+    modalarticulo.hide(); 
+});
