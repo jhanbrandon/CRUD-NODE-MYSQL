@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/api/articulos";
+const url = "http://localhost:3001/api/articulos";
 const contenedor = document.querySelector('tbody');
 const modalarticulo = new bootstrap.Modal(document.getElementById('modalarticulo'));
 const formarticulo = document.querySelector('form');

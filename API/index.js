@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors()); 
 app.use(express.json());
-const puerto = process.env.PUERTO || 3000;
+const puerto = process.env.PUERTO || 3001;
 app.listen(puerto, function() {
     console.log("Servidor de Node levantado en el puerto " + puerto);
 });
@@ -14,7 +14,7 @@ app.listen(puerto, function() {
 // Conexión a la base de datos
 let conexion = mysql.createConnection({
     host: "localhost",
-    database: "articulosdb",
+    database: "articulosbd",
     user: "root",
     password: "",
 });
